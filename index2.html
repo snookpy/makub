@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset = "UTF-8"> 
+      <title>File read using system dialogs</title> 
+   </head> 
+   
+   <body> 
+      <script type = "text/javascript"> 
+         const {ipcRenderer} = require('electron') 
+         ipcRenderer.send('openFile', () => { 
+            console.log("Event sent."); 
+         }) 
+         
+         ipcRenderer.on('fileData', (event, data) => { 
+            document.write(data) 
+         }) 
+      </script> 
+   </body> 
+</html>
