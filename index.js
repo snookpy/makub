@@ -20,7 +20,7 @@ function createWindow() {
     }))
 
     // Open chrome dev tool
-    win.webContents.openDevTools();
+    win.webContents.openDevTools()
 }
 
 app.on('ready', createWindow)
