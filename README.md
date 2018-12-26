@@ -1,14 +1,15 @@
 # Welcome to Makub 
 ### This toturial created for learn basic Electron, Makub is time attend system
 
-## Start
+## เริ่มต้น
 
+ติดตั้ง lectron package
 Install electron package
 ```cmd
 npm install electron --save-dev
 ```
 
-Add scripts section in package.json with
+เพิ่ม scripts สำหรับใช้คำสั่ง start app
 ```json
   "scripts": {
     "start": "electron .",
@@ -16,7 +17,7 @@ Add scripts section in package.json with
   }
 ```
 
-Create file "index.js" for main process then, replace the code:
+สร้างไฟล์ใหม่ ชื่อ index.js และเพิ่ม code ข้างล่างลงไป
 ```js
 const {
     app,
@@ -46,7 +47,7 @@ function createWindow() {
 app.on('ready', createWindow)
 ```
 
-Then, create file "index.html" for render view with code: 
+จากนั้นสร้าง ไฟล์ 
 ```html
 
 ```
