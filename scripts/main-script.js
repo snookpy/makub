@@ -7,7 +7,7 @@ readFileAndShowTable()
 $('#addtime-form').submit(function (e) {
     e.preventDefault()
     addTime($('#nameInput').val(), Date.now(), $('#noteInput').val())
-    $('#addtime-form').reset()
+    $('#addtime-form')[0].reset()
 })
 
 function addTime(name, time, note) {

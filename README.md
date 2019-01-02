@@ -1,59 +1,14 @@
 # Welcome to Makub 
 ### This toturial created for learn basic Electron, Makub is time attend system
 
-## เริ่มต้น
+## เมนู
 
-ติดตั้ง lectron package
-Install electron package
-```cmd
-npm install electron --save-dev
-```
+1) [ติดตั้งElectron](./docs/1_install.md)
+2) [เริ่มด้วยMainProcess](./docs/2_start_main_process.md)
+3) [สร้างUserInterface](./docs/3_render_process.md)
+4) [Programming](./docs/4_programming.md)
 
-เพิ่ม scripts สำหรับใช้คำสั่ง start app
-```json
-  "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
-```
+## ref
 
-สร้างไฟล์ใหม่ ชื่อ index.js และเพิ่ม code ข้างล่างลงไป
-```js
-const {
-    app,
-    BrowserWindow
-} = require('electron')
-const url = require('url')
-const path = require('path')
-
-let win
-
-function createWindow() {
-    win = new BrowserWindow({
-        width: 800,
-        height: 600
-    })
-
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: 'file:',
-        slashes: true
-    }))
-
-    // Open chrome dev tool
-    win.webContents.openDevTools();
-}
-
-app.on('ready', createWindow)
-```
-
-จากนั้นสร้าง ไฟล์ 
-```html
-
-```
-
-Let's start!
-```
-
-npm run start
-```
+- [electron-quick-start](https://electronjs.org/docs/tutorial/quick-start)
+- [tutorialspoint](https://www.tutorialspoint.com/electron/)
