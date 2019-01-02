@@ -1,7 +1,7 @@
 const $ = require('jquery')
 const moment = require('moment')
 const fs = require('fs')
-const filename = 'repositories/database'
+const filename = 'database'
 readFileAndShowTable()
 
 $('#addtime-form').submit(function (e) {
