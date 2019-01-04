@@ -1,4 +1,4 @@
-### ติดตั้ง lectron package
+### ติดตั้ง electron package
 
 1) สร้าง nodejs project ด้วย
 

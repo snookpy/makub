@@ -1,6 +1,6 @@
 ### เริ่มต้นใช้งาน Electron
 
-โครงสร้างของ Electronjs แบ่งเป็น 
+โครงสร้างของ Electron แบ่งเป็น 
 
 * Main Process
 * Renderer Processes
@@ -12,7 +12,7 @@ Main Process คือ Core หลักของ Electron ในการจั
 
 
 
-1) ทำการสร้างไฟล์ main.js เพื่อเขียน code Main Process จากนั้น พิม code:
+1) ทำการสร้างไฟล์ main.js เพื่อเขียน code Main Process, code:
 
 ```javascript
 const {
@@ -25,7 +25,7 @@ const path = require('path')
 ```
 code โค้ดข้างบน คือการเรียกใช้ electron object ในบื้องต้นใช้แค่ app, กับ BrowerWindow  ส่วน url กับ path คือ api ของ nodejs ที่ช่วยในการจัดการเส้นทางไฟล์ใน poject
 
-2) สร้างไฟล์ index.html สำหรับเป็น render process หรือหน้าแรกที่ต้องการแสดงผล 
+2) สร้างไฟล์ index.html สำหรับ render process เป็นหน้าแรกที่ต้องการแสดงผล 
 
 ```html
 <html lang="en">
@@ -56,10 +56,10 @@ code โค้ดข้างบน คือการเรียกใช้ e
     win.webContents.openDevTools()
 }
 ```
-ทำการสร้าง windows แรกขึ้นมา ด้วยขนาด 800 x 600 จากนั้นโหลดทำการโหลดไฟล์ index.html มาแสดงใน windows ที่ถูกสร้างขึ้น
+ทำการสร้าง windows แรกขึ้นมา ด้วยขนาด 800 x 600 จากนั้นทำการโหลดไฟล์ index.html มาแสดงใน windows ที่ถูกสร้างขึ้น
 ่ส่วน win.webContents.openDevTools() คือการเปิด chrome dev tool เพื่อให้การ debug สะดวกขึ้น
 
-4) ทำการเรียกใช้ createWindow function เมื่อ lectron app พร้อมทำงาน
+4) ทำการเรียกใช้ createWindow function เมื่อ electron app พร้อมทำงาน
 ด้วยการเพิ่ม code:
 ```javascript
     app.on('ready', createWindow)

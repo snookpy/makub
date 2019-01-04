@@ -41,8 +41,18 @@ function readFileAndShowTable() {
 }
 ```
 ทำ tbody element ของ table id = time-table ให้ว่างจากนั้น เช็คว่าไฟล์ มีอยู่หรือไม่ ถ้าไม่มีให้สร้างขึ้นมา
-เมื่ออ่านไฟล์เก็บไว้ใน data แล้ว ส่งต่อให้ function appendTable ในการ
-
+เมื่ออ่านไฟล์เก็บไว้ใน data แล้ว ส่งต่อให้ function appendTable ในการสร้าง element dom ของตารางขึ้นมา
+```javascript
+function appendTable(index, name, time, note) {
+    if (name)
+        $('#time-table tbody').append(`<tr> 
+        <td> ${index} </td>    
+        <td> ${name} </td>
+        <td> ${moment(parseInt(time)).format('HH:mm')} </td>
+        <td> ${note == "" ? '-': note} </td>
+        </tr>`)
+}
+```
 
 4) add เวลาด้วย
 ```javascript
