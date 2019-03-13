@@ -1,4 +1,4 @@
-# Welcome to Makub 
+# Welcome to Makub Version 1.0.0
 ### This toturial created for learn basic Electron, Makub is time attend system
 
 ## เมนู
